@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:first_app/block.dart';
 
 void main() {
   runApp(const Towa());
@@ -82,32 +83,30 @@ class Towa extends StatelessWidget {
                 const SizedBox(height: 20),
 
                 // bardi.jpg BELOW the Student bar
-                Padding(
+                const Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: const BoxDecoration(
-                          color: Color(0xFFF5F5DC), // Beige
-                        ), // BoxDecoration
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              'assets/images/bardi.jpg',
-                              width: 99,
-                              height: 99,
-                              fit: BoxFit.cover,
-                            ), // Image.asset
-                            const SizedBox(height: 10),
-                            const Text("100%"),
-                            const SizedBox(height: 10),
-                            const Text("BARDDDD"),
-                          ],
-                        ), // Column
-                      ), // Container
+                      Block(
+                        "Bardi",
+                        "assets/images/bardi.jpg",
+                        "Bardi V#1: OG Bardi",
+                        colour:Colors.pink,),
+
+                        Block(
+                          "Tardi",
+                          "assets/images/bardi.jpg",
+                          "Bardi V#2: Tardi",
+                          colour: Colors.blue,
+                        ),
+
+                        Block(
+                          "Mardi",
+                          "assets/images/bardi.jpg",
+                          "Bardi V#3: Mardi",
+                          colour: Colors.greenAccent,
+                        )
                     ],
                   ), // Row
                 ), // Padding
